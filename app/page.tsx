@@ -14,9 +14,9 @@ export default function Home() {
           priority
         />
         <div className={styles.intro}>
-          <h1>This course will earn more than 1,000 USD monthly IJN.</h1>
+          <h1>Let's see if Ci-Cd works...</h1>
 
-          <h2>This is coming straight from my laptop.</h2>
+          <h2>This course will earn more than 1,000 USD monthly IJN.</h2>
 
           <h3>
             Phew, I'm sick and tired of waiting on PS to throw crumbs my way.
