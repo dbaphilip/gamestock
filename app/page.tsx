@@ -16,15 +16,7 @@ export default function Home() {
         <div className={styles.intro}>
           <h1>Allen is a big nerd, e-i-e-i-o.</h1>
 
-          <h2>This course will earn more than 1,000 USD monthly IJN.</h2>
-
-          <h3>
-            Phew, I'm sick and tired of waiting on PS to throw crumbs my way.
-          </h3>
-
-          <h4>In 2026, I take my future squarely in my own hands. </h4>
-
-          <h4>If this works, I've successfuly configured CICD.</h4>
+          <h2>If this works, I've successfuly configured CICD.</h2>
 
           <p>
             Looking for a starting point or more instructions? Head over to{" "}
