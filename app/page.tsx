@@ -24,6 +24,8 @@ export default function Home() {
 
           <h4>In 2026, I take my future squarely in my own hands. </h4>
 
+          <h4>If this works, I've successfuly configured CICD.</h4>
+
           <p>
             Looking for a starting point or more instructions? Head over to{" "}
             <a
