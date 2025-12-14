@@ -14,7 +14,7 @@ export default function Home() {
           priority
         />
         <div className={styles.intro}>
-          <h1>Reconfigure CI-CD to run every 30 mins.</h1>
+          <h1>Allen is a big nerd, e-i-e-i-o.</h1>
 
           <h2>This course will earn more than 1,000 USD monthly IJN.</h2>
 
