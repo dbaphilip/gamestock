@@ -14,7 +14,16 @@ export default function Home() {
           priority
         />
         <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
+          <h1>This course will earn more than 1,000 USD monthly IJN.</h1>
+
+          <h2>This is coming straight from my laptop.</h2>
+
+          <h3>
+            Phew, I'm sick and tired of waiting on PS to throw crumbs my way.
+          </h3>
+
+          <h4>In 2026, I take my future squarely in my own hands. </h4>
+
           <p>
             Looking for a starting point or more instructions? Head over to{" "}
             <a
