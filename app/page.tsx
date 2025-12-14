@@ -14,12 +14,7 @@ export default function Home() {
           priority
         />
         <div className={styles.intro}>
-          <h1>
-            In this here {`<h1>`} tag, if I can see this particular line, it can
-            only mean, my Ci-Cd pipeline is working correctly.
-            <br />
-            Next stop, SSL configuration.
-          </h1>
+          <h1>Reconfigure CI-CD to run every 30 mins.</h1>
 
           <h2>This course will earn more than 1,000 USD monthly IJN.</h2>
 
