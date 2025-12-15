@@ -1,9 +1,14 @@
 .container {
   margin-top: 1rem;
+  margin-bottom: 9rem;
 }
 
 .gochi {
   font-family: "gochi hand", cursive;
+}
+
+img {
+  width: 100%;
 }
 
 .shadow-pri {
