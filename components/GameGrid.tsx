@@ -2,9 +2,12 @@
 
 import useGames from "@/hooks/useGames";
 import GameCard from "./GameCard";
+import SkeletonGrid from "./SkeletonGrid";
 
 export default function GameGrid() {
-  const { games, error } = useGames();
+  const { games, error, isLoading } = useGames();
+
+  if (isLoading) return <SkeletonGrid />;
 
   return (
     <>
