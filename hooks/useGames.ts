@@ -9,6 +9,7 @@ export interface Game {
   id: number;
   slug: string;
   name: string;
+  metacritic: number;
   background_image: string;
   parent_platforms: { platform: Platform }[];
 }
