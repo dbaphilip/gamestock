@@ -1,4 +1,5 @@
-import Navbar from "./components/Navbar";
+import GameGrid from "@/components/GameGrid";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
@@ -11,7 +12,9 @@ export default function Home() {
         </div>
 
         <div className="col-md-8">
-          <main style={{ backgroundColor: "yellow", height: "300px" }}></main>
+          <main style={{ backgroundColor: "yellow" }}>
+            <GameGrid />
+          </main>
         </div>
       </div>
     </div>
