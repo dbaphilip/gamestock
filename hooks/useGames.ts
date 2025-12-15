@@ -3,12 +3,14 @@
 import apiClient from "@/services/api-client";
 import { AxiosError, AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
+import { Platform } from "./usePlatforms";
 
 export interface Game {
   id: number;
   slug: string;
   name: string;
   background_image: string;
+  parent_platforms: { platform: Platform }[];
 }
 
 interface GamesResponse {
