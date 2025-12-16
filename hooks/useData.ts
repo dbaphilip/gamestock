@@ -3,7 +3,6 @@
 import apiClient from "@/services/api-client";
 import { AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
-import { Platform } from "./usePlatforms";
 
 interface Response<T> {
   count: number;
@@ -12,7 +11,7 @@ interface Response<T> {
 
 export default function useData<T>(
   endpoint: string,
-  requestConfig: AxiosRequestConfig,
+  requestConfig?: AxiosRequestConfig,
   deps?: any[]
 ) {
   //
