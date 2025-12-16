@@ -1,27 +1,14 @@
 "use client";
 
-import apiClient from "@/services/api-client";
-import { AxiosResponse } from "axios";
-import { useEffect, useState } from "react";
+import useData from "./useData";
 
-interface Genre {
+export interface Genre {
   id: number;
   name: string;
 }
 
-interface GenresResponse {
-  count: number;
-  results: Genre[];
-}
-
 export default function useGenres() {
-  const [genres, setGenres] = useState<Genre[]>([]);
-
-  useEffect(() => {
-    apiClient
-      .get<GenresResponse>("/genres")
-      .then((res: AxiosResponse) => setGenres(res.data.results));
-  }, []);
+  const { data: genres } = useData<Genre>("/genres");
 
   return { genres };
 }
