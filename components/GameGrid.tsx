@@ -3,9 +3,15 @@
 import useGames from "@/hooks/useGames";
 import GameCard from "./GameCard";
 import SkeletonGrid from "./SkeletonGrid";
+import { Genre } from "@/hooks/useGenres";
 
-export default function GameGrid() {
-  const { games, error, isLoading } = useGames();
+interface Props {
+  selectedGenre: Genre | null;
+}
+
+export default function GameGrid({ selectedGenre }: Props) {
+  //
+  const { games, error, isLoading } = useGames(selectedGenre);
 
   if (isLoading) return <SkeletonGrid />;
 

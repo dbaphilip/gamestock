@@ -10,7 +10,7 @@ export default function GameGrid() {
     <>
       {skeletons.map((skel) => (
         <div key={skel} className="col-md-4">
-          <div className="mb-5 skeleton"></div>
+          <div className="mb-5 shadow-sec skeleton"></div>
         </div>
       ))}
     </>

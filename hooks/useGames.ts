@@ -1,6 +1,7 @@
 "use client";
 
 import useData from "./useData";
+import { Genre } from "./useGenres";
 import { Platform } from "./usePlatforms";
 
 export interface Game {
@@ -12,8 +13,15 @@ export interface Game {
   parent_platforms: { platform: Platform }[];
 }
 
-export default function useGames() {
-  const { data: games, error, isLoading } = useData<Game>("/games");
+export default function useGames(selectedGenre: Genre | null) {
+  //
+  const {
+    data: games,
+    error,
+    isLoading,
+  } = useData<Game>("/games", { params: { genres: selectedGenre?.id } }, [
+    selectedGenre?.id,
+  ]);
 
   return { games, error, isLoading };
 }
