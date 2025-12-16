@@ -1,4 +1,5 @@
 import { IoGameController } from "react-icons/io5";
+import SearchForm from "./SearchForm";
 
 export default function Navbar() {
   return (
@@ -10,14 +11,9 @@ export default function Navbar() {
           eStock
         </span>
       </div>
+
       <div className="col-md-6">
-        <form>
-          <input
-            placeholder="search games..."
-            type="password"
-            className="form-control fs-2 shadow-pri"
-          />
-        </form>
+        <SearchForm />
       </div>
     </div>
   );
