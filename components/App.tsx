@@ -16,7 +16,10 @@ export default function App() {
       <div className="row mt-5">
         <div className="col-3 d-none d-md-block">
           <aside>
-            <GenreList onSelectGenre={(genre) => setSelectedGenre(genre)} />
+            <GenreList
+              selectedGenre={selectedGenre}
+              onSelectGenre={(genre) => setSelectedGenre(genre)}
+            />
           </aside>
         </div>
 

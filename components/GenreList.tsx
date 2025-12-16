@@ -4,9 +4,10 @@ import useGenres, { Genre } from "@/hooks/useGenres";
 
 interface Props {
   onSelectGenre: (genre: Genre) => void;
+  selectedGenre: Genre | null;
 }
 
-export default function GenreList({ onSelectGenre }: Props) {
+export default function GenreList({ onSelectGenre, selectedGenre }: Props) {
   //
   const { genres } = useGenres();
 
@@ -16,7 +17,11 @@ export default function GenreList({ onSelectGenre }: Props) {
         <p className="fs-4" key={genre.id}>
           <a
             onClick={() => onSelectGenre(genre)}
-            className="text-secondary"
+            className={
+              selectedGenre?.id == genre.id
+                ? `text-secondary-emphasis`
+                : `text-secondary`
+            }
             href="#"
           >
             <img
