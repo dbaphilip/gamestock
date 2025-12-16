@@ -8,7 +8,15 @@ export default function GenreList() {
   return (
     <>
       {genres.map((genre) => (
-        <p key={genre.id}>{genre.name}</p>
+        <p className="fs-4" key={genre.id}>
+          <img
+            className="me-2 object-fit-cover rounded-2"
+            style={{ width: "64px" }}
+            src={genre.image_background}
+            alt=""
+          />
+          {genre.name}
+        </p>
       ))}
     </>
   );

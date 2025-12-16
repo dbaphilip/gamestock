@@ -9,7 +9,7 @@ export default function Home() {
 
       <div className="row mt-5">
         <div className="col-3 d-none d-md-block">
-          <aside style={{ backgroundColor: "red", height: "300px" }}>
+          <aside>
             <GenreList />
           </aside>
         </div>
