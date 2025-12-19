@@ -6,9 +6,15 @@ import GenreList from "./GenreList";
 import Navbar from "./Navbar";
 import { Genre } from "@/hooks/useGenres";
 import PlatformSelector from "./PlatformSelector";
+import { Platform } from "@/hooks/usePlatforms";
+
+export interface GameQuery {
+  genre: Genre | null;
+  platform: Platform | null;
+}
 
 export default function App() {
-  const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
+  const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
 
   return (
     <div className="container">
@@ -18,8 +24,8 @@ export default function App() {
         <div className="col-3 d-none d-md-block">
           <aside>
             <GenreList
-              selectedGenre={selectedGenre}
-              onSelectGenre={(genre) => setSelectedGenre(genre)}
+              selectedGenre={gameQuery.genre}
+              onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre })}
             />
           </aside>
         </div>
@@ -28,12 +34,19 @@ export default function App() {
           <main>
             <div className="mb-5 row">
               <div className="col-md-4">
-                <PlatformSelector />
+                <PlatformSelector
+                  onSelectPlatform={(platform) =>
+                    setGameQuery({
+                      ...gameQuery,
+                      platform: JSON.parse(platform),
+                    })
+                  }
+                />
               </div>
             </div>
 
             <div className="row">
-              <GameGrid selectedGenre={selectedGenre} />
+              <GameGrid gameQuery={gameQuery} />
             </div>
           </main>
         </div>

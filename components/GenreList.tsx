@@ -19,8 +19,8 @@ export default function GenreList({ onSelectGenre, selectedGenre }: Props) {
             onClick={() => onSelectGenre(genre)}
             className={
               selectedGenre?.id == genre.id
-                ? `text-secondary-emphasis`
-                : `text-secondary`
+                ? `text-decoration-none text-secondary-emphasis`
+                : `text-decoration-none text-secondary`
             }
             href="#"
           >

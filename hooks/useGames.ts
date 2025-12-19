@@ -1,5 +1,6 @@
 "use client";
 
+import { GameQuery } from "@/components/App";
 import useData from "./useData";
 import { Genre } from "./useGenres";
 import { Platform } from "./usePlatforms";
@@ -13,15 +14,22 @@ export interface Game {
   parent_platforms: { platform: Platform }[];
 }
 
-export default function useGames(selectedGenre: Genre | null) {
+export default function useGames(gameQuery: GameQuery) {
   //
   const {
     data: games,
     error,
     isLoading,
-  } = useData<Game>("/games", { params: { genres: selectedGenre?.id } }, [
-    selectedGenre?.id,
-  ]);
+  } = useData<Game>(
+    "/games",
+    {
+      params: {
+        genres: gameQuery.genre?.id,
+        platforms: gameQuery.platform?.id,
+      },
+    },
+    [gameQuery]
+  );
 
   return { games, error, isLoading };
 }

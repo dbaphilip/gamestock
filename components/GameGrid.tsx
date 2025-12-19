@@ -1,17 +1,17 @@
 "use client";
 
 import useGames from "@/hooks/useGames";
+import { GameQuery } from "./App";
 import GameCard from "./GameCard";
 import SkeletonGrid from "./SkeletonGrid";
-import { Genre } from "@/hooks/useGenres";
 
 interface Props {
-  selectedGenre: Genre | null;
+  gameQuery: GameQuery;
 }
 
-export default function GameGrid({ selectedGenre }: Props) {
+export default function GameGrid({ gameQuery }: Props) {
   //
-  const { games, error, isLoading } = useGames(selectedGenre);
+  const { games, error, isLoading } = useGames(gameQuery);
 
   if (isLoading) return <SkeletonGrid />;
 
