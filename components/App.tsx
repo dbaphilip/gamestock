@@ -13,6 +13,7 @@ export interface GameQuery {
   genre: Genre | null;
   platform: Platform | null;
   sortOrder: string;
+  searchText: string;
 }
 
 export default function App() {
@@ -20,7 +21,9 @@ export default function App() {
 
   return (
     <div className="container">
-      <Navbar />
+      <Navbar
+        onSearch={(searchText) => setGameQuery({ ...gameQuery, searchText })}
+      />
 
       <div className="row mt-5">
         <div className="col-3 d-none d-md-block">

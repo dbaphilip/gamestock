@@ -1,7 +1,12 @@
 import { IoGameController } from "react-icons/io5";
 import SearchForm from "./SearchForm";
 
-export default function Navbar() {
+interface Props {
+  onSearch: (searchText: string) => void;
+}
+
+export default function Navbar({ onSearch }: Props) {
+  //
   return (
     <div className="row">
       <div className="col-md-4">
@@ -13,7 +18,7 @@ export default function Navbar() {
       </div>
 
       <div className="col-md-6">
-        <SearchForm />
+        <SearchForm onSearch={(searchText) => onSearch(searchText)} />
       </div>
     </div>
   );

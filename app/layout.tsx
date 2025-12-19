@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Gochi_Hand } from "next/font/google";
+import { Libre_Baskerville, Gochi_Hand } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
 
