@@ -8,6 +8,7 @@ import { Genre } from "@/hooks/useGenres";
 import PlatformSelector from "./PlatformSelector";
 import { Platform } from "@/hooks/usePlatforms";
 import SortSelector from "./SortSelector";
+import GameHeading from "./GameHeading";
 
 export interface GameQuery {
   genre: Genre | null;
@@ -37,6 +38,12 @@ export default function App() {
 
         <div className="col-md-9">
           <main>
+            <div className="row mb-3">
+              <div className="col">
+                <GameHeading gameQuery={gameQuery} />
+              </div>
+            </div>
+
             <div className="mb-5 row">
               <div className="col-md-4">
                 <PlatformSelector
