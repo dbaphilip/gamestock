@@ -2,7 +2,6 @@
 
 import { GameQuery } from "@/components/App";
 import useData from "./useData";
-import { Genre } from "./useGenres";
 import { Platform } from "./usePlatforms";
 
 export interface Game {
@@ -26,6 +25,7 @@ export default function useGames(gameQuery: GameQuery) {
       params: {
         genres: gameQuery.genre?.id,
         platforms: gameQuery.platform?.id,
+        ordering: gameQuery.sortOrder,
       },
     },
     [gameQuery]

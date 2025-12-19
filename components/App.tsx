@@ -7,10 +7,12 @@ import Navbar from "./Navbar";
 import { Genre } from "@/hooks/useGenres";
 import PlatformSelector from "./PlatformSelector";
 import { Platform } from "@/hooks/usePlatforms";
+import SortSelector from "./SortSelector";
 
 export interface GameQuery {
   genre: Genre | null;
   platform: Platform | null;
+  sortOrder: string;
 }
 
 export default function App() {
@@ -40,6 +42,15 @@ export default function App() {
                       ...gameQuery,
                       platform: JSON.parse(platform),
                     })
+                  }
+                />
+              </div>
+
+              <div className="col-md-4">
+                <SortSelector
+                  selectedSortOrder={gameQuery.sortOrder}
+                  onSelectSortOrder={(sortOrder) =>
+                    setGameQuery({ ...gameQuery, sortOrder })
                   }
                 />
               </div>
